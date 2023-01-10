@@ -28,8 +28,8 @@ h2{
 .grid{
     display: var(--grid);
    grid-template-columns: 20em 1fr;
-   height: 96vh;
-   margin: 2vh;
+   height: 100vh;
+   /* margin: 2vh; */ */
 }
 .side-bar{
     background-color:#0ea5e9;
