@@ -2,6 +2,13 @@
     padding: 0px;
 
 }
+body{
+    color: rgb(100, 103, 103);
+}
+h3{
+    color:black;
+    padding-block: 0.2rem;
+}
 a{
 
     text-decoration: none;
@@ -10,6 +17,17 @@ a{
 li{
     list-style: none;
     
+}
+.icons{
+    display: flex;
+    justify-content: space-between;
+    width:47%;
+    margin-left: 50%;
+    
+    /* outline: 2px solid green; */
+}
+.icons img{
+width:122rem;
 }
 .bold{
     font-weight: bold;
@@ -35,14 +53,16 @@ h2{
     
    grid-template-columns: 20em 1fr;
 
-   height: 100vh;
-   /* margin: 2vh; */ */
-}
+   height: 100vh}
 .side-bar{
     background-color:#0ea5e9;
     display: grid;
    grid-column: 1/2;
    grid-template-rows: 2em 15em 25em ;
+   row-gap: 3rem;
+}
+.side-bar img{
+    width:30px;
 }
 nav img{
     width:5rem;
@@ -53,6 +73,7 @@ span{
 .side-bar ul li{
     margin-top: 1rem;
     margin-left: 1rem;
+
 }
 .side-bar h2{
     display: flex;
@@ -64,6 +85,7 @@ span{
 .side-bar ul li a
 {
    display: flex;
+   font-weight: bold;
    gap: 1rem;
  align-items: center;
    /* outline: 2px solid green; */
@@ -71,14 +93,21 @@ span{
 }
 
 .main{
-    display: grid;
+     display: grid; 
     grid-template-rows: 10em 1fr;
     grid-template-columns: repeat(12,1fr);
+  
 }
 .main img{
     width:30px;
 }
+
 nav{
+   /* z-index: 99;
+    position: sticky;
+   backface-visibility: hidden;
+    top: 0; */
+ 
     grid-column: 1/-1;
     grid-template-rows: 1/2;
     display: grid;
@@ -100,9 +129,13 @@ nav{
 input{
     border-radius:20px ;
     border: none;
-    outline: 1px solid gray;
+    /* outline: 1px solid gray; */
     background-color: rgb(246, 240, 240);
-    height: 30px;
+    height: 35px;
+}
+input:focus{
+    outline: 1px solid #0ea5e9;
+    /* border: none; */
 }
 .first{
     display: grid;
@@ -170,4 +203,160 @@ input{
     grid-column:7/span 3;
 } */
 
+.content{
+    display: grid;
+    grid-column: 1/-1;
+    grid-template-columns: repeat(12,1fr);
+    grid-template-rows:3rem  3fr;
+    background-color: rgb(245, 240, 240);
+}
+.span-text,
+.main-content
+{
+    grid-column: 1/-1;
+    /* background-color: aqua; */
+    display: grid;
+    grid-template-columns: repeat(12,1fr);
+  
+}
+.span-text{
+    padding-left:2rem;
+    padding-right:2rem;
+}
 
+/* .main-content{
+ 
+} */
+.inner__main-content{
+    grid-column: 1/-1;
+    padding-left:2rem;
+    padding-right:2rem;
+    display: grid;
+    grid-template-columns: 3fr 1fr
+}
+.span-text p:nth-child(1){
+ 
+    align-self:end;
+    margin-bottom: 1rem;
+    }
+.span-text p:nth-child(2){
+    margin-bottom: 1rem;
+grid-column: 11/-1;
+align-self: end;
+margin-left: -5rem;
+}
+.small__card--container{
+  
+    display: grid;
+    grid-column: 1/2;
+    row-gap: 0rem;
+    grid-template-columns: repeat(auto-fit,minmax(22em,1fr));
+}
+.card{
+    width:22rem;
+ height: 9rem;
+    /* outline:2px solid green; */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding:1rem;
+    position: relative;
+    border-radius: 5px;
+    box-shadow:1px 5px 5px 0px rgba(137, 124, 124, 0.22);
+    background-color: white;
+}
+.card::before{
+    content:' ';
+  top:0;
+  left:0;
+  
+  bottom: 0;
+    width:0.2rem;
+    display: block;
+    background-color: rgb(159, 180, 40);
+    position: absolute;
+}
+.side-card{
+ 
+    display: grid;
+    grid-template-rows: repeat(2,1fr);
+   padding: 1rem;
+   row-gap: 2rem;
+}
+.big-card{
+   
+  
+    border-radius: 5px;
+    box-shadow:1px 5px 5px 0px rgba(137, 124, 124, 0.22);
+    background-color: white;
+   
+    
+}
+
+.side-card__inner{
+    width:80%;
+    margin: 1rem auto;
+    
+}
+
+hr{
+margin-block: 0.9rem;
+background-color: gray;
+}
+.big-card{
+    /* outline: 2px solid blue; */
+    position: relative;
+    /* outline: 2px solid green; */
+}
+ .big-card:nth-child(2){
+    height: max-content;
+    padding-bottom: 2rem;
+}
+.absolute{
+    position: absolute;
+    bottom:100%;
+}
+.trending-chats{
+display: flex;
+width: 70%;
+
+align-items: center;
+justify-content: space-between;
+margin-left: 1rem;
+margin-top: 1rem;
+}
+.trending-chats img{
+    width:50px;
+    /* margin: 0.4rem; */
+    border-radius: 50%;
+}
+.black{
+    color:black;
+}
+
+@media screen and (max-width:500px) {
+  
+    .grid-container{
+        grid-template-columns: 1fr;
+        justify-content: center;
+      
+    }
+    .card{
+      
+    }
+    .inner__main-content
+    {
+        grid-template-columns: 1fr;
+        
+    }
+    .small__card--container{
+        row-gap: 1rem;
+    }
+    .side-bar{
+        display: none;
+    }
+    .end,
+.row2{
+    display: none;
+}
+}
